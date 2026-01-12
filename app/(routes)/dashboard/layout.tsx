@@ -1,9 +1,17 @@
-import React from 'react'
-
-const DashboardLayout = () => {
+'use client';
+import React from 'react';
+import DashboardProvider from './provider';
+export default function DashboardLayout({ children }: { children: React.ReactNode }) {
   return (
-    <div>DashboardLayout</div>
-  )
-}
+    
+    <div>
 
-export default DashboardLayout
+      <DashboardProvider>
+        
+          {children}
+        
+      </DashboardProvider>
+    </div>
+    
+  );
+}
